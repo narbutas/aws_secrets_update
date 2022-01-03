@@ -6,11 +6,11 @@ parser.add_argument("-r", '--region', required=False, help="AWS region you want 
 parser.add_argument("-a", '--action', required=True, help="""possible actions: \n
                                                                 *** GET - Get Secret Values to file; \n
                                                                 *** UPDATE - Update existing secret with values from file putted in secrets_upload/ directory with extention <SECRET_NAME>.secret;
-                                                                *** GET-ALL-SECRETS-VALUES - Get all existing secrets values to file;
-                                                                *** UPDATE-ALL-SECRETS - Update all existing secrets existing in secrets_upload/ directory as separated files;
+                                                                *** GET-ALL-SECRETS-VALUES - Get all existing secrets values from file provided with --secrets-list-file to separated files in downloaded_secrets/; 
+                                                                *** UPDATE-ALL-SECRETS - Update all secrets from file provided with --secrets-list-file with data in secrets_upload/ directory as separated files;
                                                             """)
 parser.add_argument("-f", '--secrets-list-file', required=False, help="Provide file with secret names you need to download or update")
-parser.add_argument("-s", '--secret-name', required=False, help="AWS region you want to work on: us-east-1, eu-west-1")
+parser.add_argument("-s", '--secret-name', required=False, help="Provide a file with secret names, every secret in new line")
 
 args = vars(parser.parse_args())
 
