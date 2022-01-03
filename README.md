@@ -1,11 +1,9 @@
-`usage: aws_secrets.py [-h] -u USERNAME [-l LOCATION] [-r REGION] [-a ACTION] [-f SECRETS_LIST_FILE] [-s SECRET_NAME]`
+`usage: aws_secrets.py [-h] [-r REGION] [-a ACTION] [-f SECRETS_LIST_FILE] [-s SECRET_NAME]`
 
 
 **_optional arguments_:**
 
     -h, --help                                                      show this help message and exit
-    -u USERNAME, --username USERNAME                                Provide your USBank username
-    -l LOCATION, --location LOCATION                                Location where you from: US, EU
     -r REGION, --region REGION                                      AWS region you want to work on: us-east-1, eu-west-1
     -a ACTION, --action ACTION
                     possible actions:
